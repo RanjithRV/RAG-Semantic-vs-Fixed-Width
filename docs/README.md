@@ -11,3 +11,4 @@ Everything here is meant for GitHub and for the class submission.
 - `demo_script.md` — talking points for the required demo video.
 - `comparison_report.md` — fixed vs. semantic chunking comparison +
   reranking impact analysis — the core Week 2 deliverable — *not yet created*.
+
