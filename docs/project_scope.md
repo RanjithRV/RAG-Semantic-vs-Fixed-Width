@@ -2,7 +2,7 @@
 
 > Master copy lives in the "AI Education Project" Claude Project as
 > `week2_rag_project_scope.md` — update there first, then re-sync this file.
-> Last synced from master: 2026-08-23 (dropped Streamlit UI, using Lyzr published-app links instead).
+> Last synced from master: 2026-08-23 (GitHub repo confirmed correct; comparison report drafted; README.md and lyzr/prompts.md updated).
 
 ## Project
 Use case #2 from the Week 2 handout: **Financial Document Intelligence Pipeline RAG**, built no-code with **Lyzr**.
@@ -60,7 +60,7 @@ Publishing both agents (rather than just one) lets the class explore the actual 
 Local project folder, organized for GitHub, on Ranjith's Mac at:
 `~/Desktop/Agentic-AI/Class 2 RAG/`
 
-- `docs/` — `project_scope.md` (mirror of this doc), `eval_results.md` (15 eval questions + ground truth + all logged results — **renamed from `eval_questions.md`** since it holds responses/evals too, not just questions), `demo_script.md` (HeyGen demo talking points), `comparison_report.md` (not yet created) — **goes to GitHub**
+- `docs/` — `project_scope.md` (mirror of this doc), `eval_results.md` (15 eval questions + ground truth + all logged results — **renamed from `eval_questions.md`** since it holds responses/evals too, not just questions), `demo_script.md` (HeyGen demo talking points), `comparison_report.md` (chunking/reranking comparison write-up, drafted 2026-08-23) — **goes to GitHub**
 - `ingestion/` — `filings.py`, `fetch_filings.py`, `clean_filings.py`, `chunk_filings.py` — **goes to GitHub**
 - `app/` — **retired, not going to GitHub** (see Chat Interface section above) — Streamlit skeleton kept locally only
 - `lyzr/` — `prompts.md` (agent Role/Goal/Instructions, config, methodology notes), `sample_retrieval_log_q1.json` (one real saved retrieval log), no credentials — **goes to GitHub**
@@ -127,7 +127,9 @@ Fewer semantic chunks than fixed-size is expected — semantic chunks run up to 
 - [x] **Decision: skip Conditions 2 and 3 and the rest of the full 2×2 reranking comparison**
 - [x] **Decision reversed: drop the custom Streamlit UI, use Lyzr's own published-app links instead**
 - [x] Both agents published (public Playground links live, correctly labeled after fixing an initial mix-up)
-- [x] `github-upload/` folder prepared locally with everything that should go to GitHub — **still needs `app/` removed manually before pushing**
-- [ ] **Current step: create the GitHub repo and push** — user pushing directly (GitHub login needed, which this session can't do on the user's behalf); if a terminal approach is wanted again, note the earlier git permission issue on the connected-folder mount that needs a workaround
-- [ ] Write comparison report + reranking-impact discussion (`docs/comparison_report.md`), naming the incomplete 2×2 as a scope/methodology limitation, and mentioning both published-app links plus the confirmed session-contamination risk
-- [ ] Record demo video (HeyGen), write project documentation, submit
+- [x] GitHub repo created and pushed correctly: https://github.com/RanjithRV/RAG-Semantic-vs-Fixed-Width — `README.md`, `docs/`, `ingestion/`, `lyzr/`, `.gitignore` all confirmed at repo root (no `github-upload/` wrapper, no `app/`), verified via GitHub API
+- [x] Root `README.md` updated to drop the retired Streamlit plan and point at the two published Lyzr Playground links instead
+- [x] `lyzr/prompts.md` updated with an explicit methodology note on why MMR is used as the reranking stand-in (Lyzr has no dedicated reranker) — framed as a substitution, not an equivalent
+- [x] Wrote comparison report + reranking-impact discussion (`docs/comparison_report.md`), naming the incomplete 2×2 as a scope/methodology limitation, framing MMR-vs-Basic (not reranked-vs-not), and covering both published-app links plus the confirmed session-contamination risk
+- [ ] **Current step: push the 3 updated/new files to GitHub** — `docs/comparison_report.md` (new), `README.md` (update in place), `lyzr/prompts.md` (update in place) — content ready locally, user pushing directly via GitHub's web editor
+- [ ] Record demo video (HeyGen), write final project documentation, submit
