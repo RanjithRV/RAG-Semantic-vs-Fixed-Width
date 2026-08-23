@@ -38,3 +38,13 @@ to GitHub: `git init`, review `git status` against this table, then
 
 1. `ingestion/fetch_filings.py` → downloads the 6 filings into `data/raw/`.
 2. `ingestion/clean_filings.py` → strips HTML/XBRL markup and filing
+   boilerplate, converts tables to Markdown, writes `data/cleaned/*.txt`.
+3. `ingestion/chunk_filings.py` → writes two variants from the cleaned
+   text: fixed-size chunks (`data/chunks/fixed/`) and section/topic-based
+   "semantic" chunks (`data/chunks/semantic/`), each as individual `.txt`
+   files ready to upload into a Lyzr knowledge base.
+4. Build two Lyzr knowledge bases/agents, one per chunk variant, run the
+   eval question set against both, write up the comparison in `docs/`.
+5. Publish both agents' Playground links (`?tab=playground&public=true`)
+   so the class can query each chunking strategy directly — no separate
+   app to deploy.
