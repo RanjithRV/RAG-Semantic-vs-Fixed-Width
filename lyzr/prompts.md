@@ -43,6 +43,14 @@ Answer questions about these three companies' FY2024 and FY2025 10-K annual repo
 - **Memory**: not added on either agent — each of the 15 eval questions should be answered independently, without earlier questions in a test session influencing retrieval/answers for later ones.
 - **Responsible AI**: not added on either agent — it's a content-moderation/guardrail feature, not related to retrieval or citation quality, and out of scope for this comparison.
 
+## Methodology note: why MMR is used as the reranking stand-in
+
+The assignment asks for a reranking-impact comparison as part of the retrieval evaluation. Lyzr's agent Configure panel does not expose a dedicated reranking model or reranking step — the retrieval-type options available are **Basic**, **MMR**, and **HyDE**. There is no separate "rerank retrieved chunks" toggle to test against a no-reranking baseline.
+
+Of the three options, **MMR (Maximal Marginal Relevance) was chosen as the closest practical stand-in for reranking**: it re-scores and re-selects from the initially retrieved candidate set to reduce redundancy and favor diverse, relevant chunks, which is functionally the same role a reranking step plays in a typical RAG pipeline (take an initial top-k retrieval, then apply a second pass that reorders/filters it before it reaches the LLM). Basic retrieval, by contrast, returns the top-k chunks by similarity score alone with no second pass.
+
+**This is a substitution, not an equivalent.** A real reranker (e.g., a cross-encoder model scoring query-chunk pairs) and MMR (a diversity-driven re-selection heuristic) work on different principles and aren't guaranteed to produce comparable effects. The comparison report frames results as **"MMR retrieval vs. Basic retrieval,"** not as "reranked vs. non-reranked," to avoid overclaiming what this evaluation actually tested. This limitation is named explicitly here, in `docs/project_scope.md`, and in `docs/comparison_report.md`, rather than left implicit.
+
 ## Methodology note: reset the Playground session between every eval question
 
 Discovered during testing: even with the agent's "Memory" feature left un-added, a single Playground conversation thread still carries its full turn history into each new call (standard multi-turn chat behavior, separate from Lyzr's explicit Memory feature). By the 5th question in one continuous thread, the model began blending earlier Q&A pairs into a new answer — re-answering two already-correct earlier questions incorrectly alongside the new one, and getting the new question wrong too (see the Rumble advertising-percentage miscalculation in `docs/eval_results.md`, Q5, first attempt).
