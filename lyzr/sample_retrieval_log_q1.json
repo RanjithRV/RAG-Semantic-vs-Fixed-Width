@@ -1,0 +1,116 @@
+{
+  "feature": "knowledge_base",
+  "level": "info",
+  "status": "success",
+  "message": "Documents retrieved from knowledge base",
+  "timestamp": "2026-08-22T17:35:10.568697+00:00",
+  "event_type": "kb_documents_retrieved",
+  "run_id": "ae0a6cde-8baa-4160-a096-177a9873efd6",
+  "trace_id": "9578d1ac-8257-4c03-99a8-5ee133a4ec88",
+  "session_id": "6a89d97e0fdb3536018ada9f-7cbhquuty3",
+  "query": "What was Rumble's total revenue for fiscal year 2025?",
+  "documents": [
+    {
+      "id": "ff3d7df7-18ef-4594-abae-0a945124714b",
+      "score": 0.85768664,
+      "metadata": {
+        "source": "storage/rumble_fy2025.txt",
+        "file_path": "storage/rumble_fy2025.txt",
+        "file_name": "rumble_fy2025.txt",
+        "file_type": "text/plain",
+        "file_size": 438444,
+        "creation_date": "2026-08-22",
+        "last_modified_date": "2026-08-22",
+        "last_accessed_date": "2026-08-22",
+        "timestamp": "2026-08-22T15:34:07.707361+00:00"
+      },
+      "text": "Monetization | | $ | 86,519,799 | | | $ | 83,458,309 | | | Other Initiatives | | | 14,102,521 | | | | 12,029,881 | | | Total revenues | | $ | 100,622,320 | | | $ | 95,488,190 | | The Company recognizes revenue either at a point in time or over time, depending upon the characteristics of the contract. | | | Year Ended December 31, | | | | | | | | --- | --- | --- | --- | --- | --- | --- | --- | --- | | | | 2025 | | | 2024 | | | | | Point in time | | $ | 38,843,567 | | | $ | 36,318,995 | | | Over time | | | 61,778,753 | | | | 59,169,195 | | | Total revenues | | $ | 100,622,320 | | | $ | 95,488,190 | | Deferred Revenue Deferred revenue recorded at December 31, 2025 is expected to be fully recognized by December 31, 2026. The deferred revenue balance as of December 31, 2025 was $ 16,105,587 . The deferred revenue balance as of December 31, 2024 was $ 12,812,984 , of which $ 11,009,985 was recognized as revenues for the year ended December 31, 2025. The deferred revenue balance as of January 1, 2024 was $ 7,003,891 , of which $ 6,716,383 was recognized as revenues for the year ended December 31, 2024."
+    },
+    {
+      "id": "b638153b-ede5-49ba-b5ee-972ae8d9b425",
+      "score": 0.83931077,
+      "metadata": {
+        "source": "storage/rumble_fy2025.txt",
+        "file_name": "rumble_fy2025.txt"
+      },
+      "text": "[truncated in this sample file — see full run in Lyzr Studio logs if needed] Right-of-Use Assets and Lease Liabilities, Intangible Assets tables..."
+    },
+    {
+      "id": "7878e541-938a-49c8-8e42-77d00b12eb43",
+      "score": 0.8388159,
+      "metadata": {
+        "source": "storage/rumble_fy2024.txt",
+        "file_name": "rumble_fy2024.txt"
+      },
+      "text": "[truncated in this sample file] Goodwill, Income Taxes notes..."
+    },
+    {
+      "id": "76068222-56ee-4655-a90d-c8fefdf25a03",
+      "score": 0.8381174,
+      "metadata": {
+        "source": "storage/rumble_fy2025.txt",
+        "file_name": "rumble_fy2025.txt"
+      },
+      "text": "[truncated in this sample file] Related Party Transactions, Segment and Geographic Information — includes Revenues 2025: $100,622,320, 2024: $95,488,190..."
+    },
+    {
+      "id": "08de35aa-75f7-4f29-83c5-807a21b105f4",
+      "score": 0.8374537,
+      "metadata": {
+        "source": "storage/rumble_fy2024.txt",
+        "file_name": "rumble_fy2024.txt"
+      },
+      "text": "[truncated in this sample file] Auditor's report and Consolidated Statements of Operations for FY2024/FY2023..."
+    },
+    {
+      "id": "ceba6b92-c0b0-4eff-862d-b22dca3e2bb8",
+      "score": 0.834273,
+      "metadata": {
+        "source": "storage/rumble_fy2024.txt",
+        "file_name": "rumble_fy2024.txt"
+      },
+      "text": "[truncated in this sample file] Segment and Geographic Information (Continued), Subsequent Events, Item 9A Controls and Procedures..."
+    },
+    {
+      "id": "5a7c01a7-8d5b-46ef-b4e4-982a35b06dbf",
+      "score": 0.83078575,
+      "metadata": {
+        "source": "storage/rumble_fy2025.txt",
+        "file_name": "rumble_fy2025.txt"
+      },
+      "text": "[truncated in this sample file] Intangible Assets, Goodwill, Income Taxes notes..."
+    },
+    {
+      "id": "f9056768-2efb-4804-96bd-f911938e2f21",
+      "score": 0.82968664,
+      "metadata": {
+        "source": "storage/rumble_fy2024.txt",
+        "file_name": "rumble_fy2024.txt"
+      },
+      "text": "[truncated in this sample file] Item 4 Mine Safety Disclosures, Item 5 Market for Registrant's Common Equity, Item 6 [Reserved], Item 7 MD&A overview..."
+    },
+    {
+      "id": "76dfbef1-2646-48f0-bea9-c3ab7d479782",
+      "score": 0.82882136,
+      "metadata": {
+        "source": "storage/rumble_fy2025.txt",
+        "file_name": "rumble_fy2025.txt"
+      },
+      "text": "[truncated in this sample file] Share-Based Compensation Expense..."
+    },
+    {
+      "id": "6af11955-f75e-4bd0-af85-33a22809e0a4",
+      "score": 0.8270465,
+      "metadata": {
+        "source": "storage/rumble_fy2025.txt",
+        "file_name": "rumble_fy2025.txt"
+      },
+      "text": "[truncated in this sample file] Shareholders' Equity (Deficit)..."
+    }
+  ],
+  "rag_id": "6a89bfc909128d7346e03b5a",
+  "rag_name": "basic_fixed_size",
+  "agent_id": "6a89d97e0fdb3536018ada9f",
+  "agent_name": "Fixed-Size-Agent",
+  "log_id": "d897d62b-24fb-47e0-aeb9-9793bcebb9b6"
+}
