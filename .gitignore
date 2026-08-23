@@ -1,0 +1,23 @@
+# --- Data (regenerable via ingestion/ scripts; keep repo small) ---
+data/raw/
+data/cleaned/
+data/chunks/
+
+# --- Secrets ---
+.env
+*.env
+app/.streamlit/secrets.toml
+**/secrets.toml
+!**/secrets.toml.example
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# --- OS / editor cruft ---
+.DS_Store
+.vscode/
+.idea/
